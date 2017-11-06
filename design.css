@@ -1,0 +1,19 @@
+#error {
+
+    background: pink;
+    padding: 5px;
+    border: 1px solid black;
+    
+}
+#resultat
+{
+    background: green;
+    padding: 5px;
+    color:white;
+}
+form {
+    background-color: white;
+}
+body{
+    background-color: gray;
+}

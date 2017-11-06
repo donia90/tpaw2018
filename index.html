@@ -1,57 +1,46 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>🏫 Index des TP</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
+<html lang="fr">
+        <head>
+        <title>formulaire</title>
+        <meta charset ="utf-8"/>
+        <link rel="stylesheet" href ="design.css" />
+        <script type="text/javascript" src="formulaire.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        </head>
+        <body>
+                <h1>Saisie d'une fiche "Personne"</h1>
+            <form method="post" action="">
+               
+               
+                <table>
+                <tr>        
+                    <td>Nom</td>
+                    <td><input type="text" name="fnom" id="nom"></td>
+                </tr>
+                <tr>
+                    <td>Prénom</td>
+                    <td><input type="text" name="fprenom" id="prenom"></td>
+                </tr>
+                <tr>
+                    <td>Date de naissance</td>
+                    <td><input type="text" name="fdaten" placeholder="JJ/MM/AAAA" id="date"></td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td><input type="text" name="faddresse"  id="addresse"></td>
+                </tr>
+                <tr>
+                    <td>Mail</td>
+                    <td><input type="text" name="fmail" id="mail"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>  <input type="button" value="Valider" onclick="validation()" /></td>
+                </tr>
+                </table>
+                <div id="error"> </div> 
+                <div id="resultat"> </div> 
         
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>🏫 Page d'index des TP 🎒</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello ☀️️</p>
-        <img src="galilee.png" alt="Logo Galilee"/>
-      
-      <ul>
-        <li>
-          <a href="tp1/index.html">/TP1</a>
-        </li>
-        <li>
-          <a href="tp2/index.html">/TP2</a>
-        </li>
-        <li>
-          <a href="tp3/index.html">/TP3</a>
-        </li>
-        <li>
-          <a href="tp4/index.html">/TP4</a>
-        </li>
-        <li>
-          <a href="tp5/index.html">/TP5</a>
-        </li>
-        <li>
-          <a href="tp6/index.html">/TP6</a>
-        </li>
-        <li>
-          <a href="tp7/index.html">/TP7</a>
-        </li>
-      </ul>
-    </body>
-</html>
+            </form>
+        
+        </body>
+        </html>
