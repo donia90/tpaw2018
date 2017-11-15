@@ -1,26 +1,29 @@
 <!doctype html>
 <html lang="fr">
-        <head>
-        <title>formulaire</title>
+<head>
+    <title>formulaire</title>
        
-<meta charset ="utf-8"/>
+    <meta charset ="utf-8"/>
 
-<!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<!-- CSS boostrap -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/popper.min.js"></script>
+    <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <!-- CSS boostrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
 
-<script src="js/form-jquery-validation.js"></script>
-      
-
-<link rel="stylesheet" href="http//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="http//resources/demos/style.css">
-<script src="http//code.jquery.com/jquery-1.12.4.js"></script>
-<script src="http//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>     
-      
+    <script src="js/form-jquery-validation.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+    <script>
+        $( function() {
+         $( "#datepicker" ).datepicker().formatDate( "yy-mm-dd" );
+         } );
+    </script> 
 </head>
 <body>
     <div class="container">
@@ -44,7 +47,7 @@
                 <div class="row">
                     <div class="col-4">
                         <label> Date de naissance</label>
-                        <input type="text" id="datepicker" class="form-control"value="">
+                        <input type="text" id="datepicker" placeholder ="jj/mm/aa" class="form-control"value="">
                     </div>
                 </div>
                 <div class="row">  
@@ -64,9 +67,7 @@
                 <div>
                         <button type="button" id="submit" class="btn btn-primary" >Valider </button>
                 </div>
-                     
-            
-                
+
                 
             </form>
     </div>
