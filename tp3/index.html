@@ -1,96 +1,82 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <title>formulaire</title>
-       
-    <meta charset ="utf-8"/>
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
     <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
     <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <!-- CSS boostrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/popper.min.js"></script>
-
-    <script src="js/form-jquery-validation.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        
+    <script src="js/popper.min.js"></script>
+
+    <!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/form-jquery-validation.js"></script>
+
+    <!-- CSS boostrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <title>formulaire</title>
+
     <script>
-        $( function() {
-         $( "#datepicker" ).datepicker().formatDate( "yy-mm-dd" );
-         } );
-    </script> 
+    $( function() {
+    $( "#datepicker" ).datepicker({maxDate:'0',dateFormat:'dd/mm/yy' });
+    } );
+    </script>
+
 </head>
 <body>
-    <div class="container">
-                        <!-- Content here -->
-                <h1>Saisie d'une fiche "Personne"</h1>
-            <form method="post" action="">
-               
-               
-                 <div class="row">  
-                    <div class="col-4">
-                        <label>Nom </label> 
-                        <input type="text" name="fnom" id="nom" class="form-control">
-                    </div>
-                </div>    
-                <div class="row">  
-                    <div class="col-4">
-                         <label>Prénom</label>
-                         <input type="text" name="fprenom" id="prenom" class="form-control" value="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <label> Date de naissance</label>
-                        <input type="text" id="datepicker" placeholder ="jj/mm/aa" class="form-control"value="">
-                    </div>
-                </div>
-                <div class="row">  
-                    <div class="col-4">
-                        <labe>Adresse</labe>
-                        <input type="text" name="faddresse"  id="addresse" class="form-control"value="">
-                    </div>
-                </div>  
-                
-                <div class="row">  
-                    <div class="col-4">
-                        <label>Mail</label>
-                        <input type="text" name="fmail" id="mail" class="form-control"value="">
-                    </div>
-                </div>
-                </br>
-                <div>
-                        <button type="button" id="submit" class="btn btn-primary" >Valider </button>
-                </div>
 
-                
-            </form>
-    </div>
-        <div class="modal" tabindex="-1" role="dialog" id="myModal">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">Modal title</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <p>Corps de la modal à modifier après validation du formulaire</p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
+    <div class="container">
+        <h1>Saisie d'une fiche "Personne"</h1>
+        <div class="form-group" col-md-6>
+            <label for="nom"> Nom</label>
+            <input type="text" class="form-control" id="nom" >
         </div>
-    
-                
- </body>
+        <div class="form-group" col-md-6>
+            <label for="prenom"> Prenom</label>
+            <input type="text" class="form-control" id="prenom" >
+        </div>
+        <div class="form-group" col-md-6>
+            <label for="addresse"> Adresse</label>
+            <input type="texte" class="form-control" id="addresse" >
+        </div>
+        <div class="form-group" col-md-6>
+            <label for="date"> DATE</label>
+            <input type="text" class="form-control" id="datepicker" placeholder="jj/mm/aa">
+        </div>
+        <div class="form-group" col-md-6>
+            <label for="mail"> Mail</label>
+            <input type="mail" class="form-control" id="mail" >
+        </div>
+            <button type="submit" class="btn btn-primary btn-lg pull-right" id="submit"> valider </button>
+    </div>
+
+
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+            <div class="modal-body">
+                <p>Corps de la modal à modifier après validation du formulaire</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
 </html>
