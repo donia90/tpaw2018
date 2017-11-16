@@ -10,8 +10,8 @@ $( document ).ready(function() {
      if ($("#nom").val().length>4 && $("#prenom").val().length>4 && $("#mail").val().length>4 && $("#addresse").val().length>4 ){
  
       $('#myModal').modal("show");
-      $(".modal-title").text("Bienvenue "+ $("#Nom").val());
-      $(".modal-body").html('Vous etes né(e) le '+ $("#date").val());
+      $(".modal-title").text("Bienvenue "+ $("#nom").val());
+      $(".modal-body").html('Vous etes né(e) le '+ $("#datepicker").val());
       $(".modal-body").html('<a href="http://maps.google.com/maps?q='+ $("#addresse").val()+'"> <img src="https://maps.googleapis.com/maps/api/staticmap?center='+$("#addresse").val()+ ',&zoom=13&size=400x400"/></a> <br></br>'
           +'et vous habitez <a href="http://maps.google.com/maps?q='+ $("#addresse").val()+'">'+ $("#addresse").val()+'</a>');
      
